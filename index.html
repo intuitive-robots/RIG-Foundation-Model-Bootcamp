@@ -137,7 +137,7 @@
 
 .speaker-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* Vertically center image with heading/content */
     margin-bottom: 60px;
     flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
@@ -150,6 +150,7 @@
     margin-right: 2%; /* Adds space between image and text */
     object-fit: cover;
     flex-shrink: 0;
+    display: block; /* Allows horizontal centering with auto margins when needed */
 }
 
 .speaker-info {
@@ -167,8 +168,7 @@
     .speaker-image {
         width: 50%; /* Adjust image width to half of the container on small screens */
         max-width: 150px; /* Limit max width */
-        margin-right: 0; /* Remove right margin since items are stacked */
-        margin-bottom: 15px; /* Add spacing below the image */
+        margin: 0 auto 15px; /* Center horizontally and add spacing below */
     }
 
     .speaker-info {
