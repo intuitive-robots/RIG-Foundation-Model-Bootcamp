@@ -426,6 +426,62 @@
             box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
         }
         
+        /* Floating Apply Button */
+        .floating-apply-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .floating-apply-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.7);
+        }
+        
+        .floating-apply-btn::before {
+            content: "→";
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-apply-btn:hover::before {
+            transform: translateX(3px);
+        }
+        
+        /* Hide floating button on small screens to avoid blocking content */
+        @media (max-width: 768px) {
+            .floating-apply-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 12px 24px;
+                font-size: 0.95em;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .floating-apply-btn {
+                bottom: 15px;
+                right: 15px;
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+        
         /* Footer */
         .footer {
             background: #0a0a0a;
@@ -669,6 +725,20 @@
     <p>&copy; 2025 Karlsruhe Institute of Technology | KIT Center Information · Systems · Technologies (KCIST)</p>
     <p>RIG Foundation Model Bootcamp</p>
 </div>
+
+<!-- Floating Apply Button -->
+<a href="#apply-section" class="floating-apply-btn">Apply Now</a>
+
+<script>
+    // Smooth scroll to apply section
+    document.querySelector('.floating-apply-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector('.cta-section').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'center'
+        });
+    });
+</script>
 
 </body>
 </html>
