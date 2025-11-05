@@ -439,6 +439,14 @@
             margin: 5px 0;
         }
         
+        /* Tablet/Medium screens */
+        @media (max-width: 1024px) {
+            .stats-section {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+        
         @media (max-width: 768px) {
             .section {
                 padding: 60px 20px;
@@ -463,6 +471,14 @@
             
             .stat-number {
                 font-size: 1.2em;
+            }
+        }
+        
+        /* Mobile screens */
+        @media (max-width: 480px) {
+            .stats-section {
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
         }
         
@@ -520,7 +536,7 @@
         
         <div class="content-block">
             <p>
-                Foundational Behavior Models represent a paradigm shift in robotics, yet Germany has a critical research gap in this emerging field. KIT, with support of the KIT Center Information · Systems · Technologies (KCIST), is hosting the first RIG Bootcamp on Foundational Behavior Models from November 24–28, 2025, to catalyze collaborative research across the German robotics community.
+                Foundational Behavior Models represent a paradigm shift in robotics, yet Germany has a critical research gap in this emerging field. KIT, with support of the <i>KIT Center Information · Systems · Technologies (KCIST)</i>, is hosting the first RIG Bootcamp on Foundational Behavior Models from November 24–28, 2025, to catalyze collaborative research across the German robotics community.
             </p>
             <!-- <p style="margin-top: 15px;">
                 KIT is among the first European labs working on Vision-Language-Action models, with recent publications at CoRL 2025 and NeurIPS 2025 demonstrating that European research can compete at the highest level.
